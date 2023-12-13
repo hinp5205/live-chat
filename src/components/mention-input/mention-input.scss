@@ -1,0 +1,65 @@
+.mention-input-container {
+  width: 100%;
+  position: relative;
+  .mention-input {
+    padding: var(--space-xs);
+    color: var(--primary);
+    &::placeholder {
+      opacity: 0.6;
+      color: var(--white);
+    }
+    > div:empty:before {
+      content: attr(data-placeholder);
+      opacity: 0.3;
+      overflow: visible;
+      display: inline-block;
+      pointer-events: none;
+      white-space: nowrap;
+      width: 0;
+      height: 0;
+      color: var(--primary);
+    }
+  }
+  .suggestion-container {
+    overflow: auto;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    max-height: 100px;
+    transform: translateY(-50%);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    background-color: var(--white);
+    .suggestion {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      .suggestion-item {
+        cursor: pointer;
+        padding: 8px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+          border: 0;
+        }
+        &:hover,
+        &:active {
+          background-color: var(--light-blue);
+        }
+        > span {
+          max-width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+.tagged-user {
+  background-color: var(--light-blue);
+  pointer-events: none;
+}

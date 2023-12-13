@@ -1,0 +1,48 @@
+.room-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    .title {
+      color: var(--primary);
+    }
+    .input-container {
+      .input {
+        min-height: 46px;
+      }
+    }
+  }
+  .room-items-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .room-items {
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      .room-title {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+.form-container {
+  height: 100%;
+  width: 100%;
+  padding: 16px;
+  flex-direction: column;
+}

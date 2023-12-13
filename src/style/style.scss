@@ -1,0 +1,71 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+html {
+  background-color: gray;
+}
+
+body {
+  font-size: 16px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--primary);
+}
+
+input:focus-visible,
+select:focus-visible,
+div[contenteditable='true']:focus-visible {
+  outline: none;
+}
+
+.EmojiPickerReact .epr-preview {
+  display: none;
+}
+
+.EmojiPickerReact li.epr-emoji-category > .epr-emoji-category-label {
+  font-size: 12px;
+}
+
+.EmojiPickerReact {
+  --epr-emoji-size: 24px;
+  --epr-category-label-height: 30px;
+}
+
+:root {
+  --space-unit: 1rem;
+  --space-xxs: calc(0.25 * var(--space-unit)); // 4px
+  --space-xs: calc(0.5 * var(--space-unit)); // 8px
+  --space-sm: calc(0.75 * var(--space-unit)); // 12px
+  --space-md: calc(1.25 * var(--space-unit)); // 20px
+  --space-lg: calc(2 * var(--space-unit)); // 32px
+  --space-xl: calc(3.25 * var(--space-unit)); // 52px
+  --space-xxl: calc(5.25 * var(--space-unit)); // 84px
+  --black: #1b1b1b;
+  --white: #fff;
+  --border: #959595;
+  --spacing: 4px;
+  --bg-primary: #5ebcf2;
+  --hover: #3a8dbd;
+  --primary: #fff;
+  --error: #f75a4f;
+  --light-blue: #b2edf7;
+}

@@ -1,0 +1,19 @@
+.input-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  .input {
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: var(--space-xxs);
+    width: 100%;
+    resize: none;
+    min-height: 36px;
+  }
+  .error {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: var(--error);
+  }
+}

@@ -1,0 +1,124 @@
+.live-chat-container {
+  height: 86%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  .frame-chat-container {
+    overflow: auto;
+    max-height: 206px;
+    padding: var(--space-xs);
+    .frame-chat {
+      position: relative;
+      .notify-join {
+        text-align: center;
+        font-size: 0.75rem;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+      .chat-box {
+        padding: 8px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        background-color: #242470;
+        width: max-content;
+        min-width: 100px;
+        max-width: 150px;
+        word-break: break-word;
+        position: relative;
+        &::before {
+          content: attr(aria-username);
+          position: absolute;
+          top: -6px;
+          background-color: var(--title-chat-box);
+          border-radius: 32px;
+          padding: 0 8px;
+          font-size: 0.75rem;
+          overflow: hidden;
+          white-space: nowrap;
+          max-width: 100px;
+        }
+        &.is-me {
+          margin-left: auto;
+          background-color: var(--bg-primary);
+        }
+      }
+    }
+  }
+  .arrow-down {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: gray;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-xs);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+  }
+  .input-message {
+    padding: var(--space-xs);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    .form-input {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      gap: var(--space-xs);
+      align-items: center;
+      position: relative;
+      .typing-container {
+        position: absolute;
+        top: -20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .typing {
+          color: #fff;
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          opacity: 0.6;
+          div {
+            animation: typing 1s infinite;
+            animation-fill-mode: both;
+            &:nth-child(2) {
+              animation-delay: 0.2s;
+            }
+            &:nth-child(3) {
+              animation-delay: 0.4s;
+            }
+          }
+        }
+      }
+    }
+    .emoji {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-emoji {
+      right: 0;
+    }
+  }
+}
+@keyframes typing {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
